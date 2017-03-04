@@ -5,30 +5,95 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="/lib/w3.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-</head>
+  </head>
 <body>
-  <div class="container-fluid">
+  <div class="container-fluid body-content">
     <div class="row">
     <%= render "common/navbar" %>
     </div>
       <div class="row">
-        <div class="col-md-2">
+        <div class="col-md-3">
           <div class="vertical-menu">
-            <a href="#" class="active">Home</a>
-            <a href="#">Link 1</a>
-            <a href="#">Link 2</a>
-            <a href="#">Link 3</a>
-            <a href="#">Link 4</a>
+            <a href="#" class="heading">管理中心首页</a>
+            <a href="#collapseOne" class="active" data-toggle="collapse" data-parent="#accordion">
+              <i class="fa fa-id-card-o" aria-hidden="true"></i> 教师资格认定管理<span class="pull-right"><i class="fa fa-angle-double-down" aria-hidden="true"></i></span>
+            </a>
+              <div id="collapseOne" class="collapse">
+                <a href="#collapseOneZGSQ" class="first" data-toggle="collapse" data-parent="#accordion"><i class="fa fa-hand-paper-o" aria-hidden="true"></i>
+                  资格申请<span class="pull-right"><i class="fa fa-angle-down" aria-hidden="true"></i></span>
+                </a>
+                  <div id="collapseOneZGSQ" class="collapse">
+                    <a href="#collapseOne-secondTJFX" class="second" data-toggle="collapse" data-parent="#accordion">
+                      ● 统计分析 <span class="pull-right"><i class="fa fa-angle-down" aria-hidden="true"></i></span>
+                    </a>
+                      <div id="collapseOne-secondTJFX" class="collapse">
+                        <a href="#" class="third">• 学历分布</a>
+                        <a href="#" class="third">• 年龄段分布</a>
+                        <a href="#" class="third">• 学习形式</a>
+                        <a href="#" class="third">• 资格分布</a>
+                      </div>
+                    <a href="#" class="second">● 认定计划</a>
+                    <a href="#" class="second">● 网报数据</a>
+                    <a href="#" class="second">● 现场确认预约</a>
+                    <a href="#" class="second">● 体检报告</a>
+                  </div>
+                <a href="#collapseOneLSSJ" class="first" data-toggle="collapse" data-parent="#accordion"><i class="fa fa-table" aria-hidden="true"></i>
+                  历史数据<span class="pull-right"><i class="fa fa-angle-down" aria-hidden="true"></i></span>
+                </a>
+                  <div id="collapseOneLSSJ" class="collapse">
+                    <a href="#" class="second">● 统计分析</a>
+                    <a href="#" class="second">● 数据查询</a>
+                    <a href="#" class="second">● 证书补发</a>
+                  </div>
+              </div>
+            <a href="#collapseTwo" class="active" data-toggle="collapse" data-parent="#accordion">
+              <i class="fa fa-pencil" aria-hidden="true"></i> 教师资格考试管理<span class="pull-right"><i class="fa fa-angle-double-down" aria-hidden="true"></i></span>
+            </a>
+              <div id="collapseTwo" class="collapse">
+                <a href="#" class="first"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                  笔试管理<span class="pull-right"><i class="fa fa-angle-down" aria-hidden="true"></i></span>
+                </a>
+                <a href="#" class="first"><i class="fa fa-smile-o" aria-hidden="true"></i>
+                  面试管理<span class="pull-right"><i class="fa fa-angle-down" aria-hidden="true"></i></span>
+                </a>
+              </div>
+            <a href="#collapseThree" class="active" data-toggle="collapse" data-parent="#accordion">
+              <i class="fa fa-tasks" aria-hidden="true"></i> 教育行政业务管理<span class="pull-right"><i class="fa fa-angle-double-down" aria-hidden="true"></i></span>
+            </a>
+              <div id="collapseThree" class="collapse">
+                <a href="#" class="first"><i class="fa fa-info-circle" aria-hidden="true"></i>
+                  会议信息
+                </a>
+              </div>
+            <a href="#collapseFour" class="active" data-toggle="collapse" data-parent="#accordion">
+              <i class="fa fa-check-square-o" aria-hidden="true"></i> 教师定期注册管理<span class="pull-right"><i class="fa fa-angle-double-down" aria-hidden="true"></i></span>
+            </a>
+              <div id="collapseFour" class="collapse">
+                <a href="#" class="first"><i class="fa fa-hand-paper-o" aria-hidden="true"></i>
+                  资格申请<span class="pull-right"><i class="fa fa-angle-down" aria-hidden="true"></i></span>
+                </a>
+                <a href="#" class="first"><i class="fa fa-table" aria-hidden="true"></i>
+                  历史数据<span class="pull-right"><i class="fa fa-angle-down" aria-hidden="true"></i></span>
+                </a>
+              </div>
+            <a href="#collapseFive" class="active" data-toggle="collapse" data-parent="#accordion">
+              <i class="fa fa-tachometer" aria-hidden="true"></i> 控制面板<span class="pull-right"><i class="fa fa-angle-double-down" aria-hidden="true"></i></span>
+            </a>
+              <div id="collapseFive" class="collapse">
+                <a href="#" class="first"><i class="fa fa-key" aria-hidden="true"></i>
+                  设置密码
+                </a>
+              </div>
           </div>
         </div>
-        <div class="col-md-10">
+        <div class="col-md-9">
           <%= yield %>
         </div>
       </div>
+      <%= render "common/footer" %>
     </div>
+
+
 
 
 </body>
