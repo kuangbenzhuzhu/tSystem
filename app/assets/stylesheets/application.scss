@@ -17,3 +17,80 @@
  @import "bootstrap-sprockets";
  @import "bootstrap";
  @import "font-awesome";
+
+
+body{
+  background-color: #efefef;
+}
+
+.navbar-default{
+  background-color: #444F62;
+  border-color: #465362;
+  height: 80px;
+}
+
+@media (min-width: 768px) {
+    .navbar {
+        border-radius: 0;//圆角为0
+    }
+}
+
+.navbar-default .navbar-brand{
+  color: #fff;
+  padding: 10px 25px;//上下10px,左右15px
+  line-height: 50px;//文字行高
+  font-size: 30px;
+}
+
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+  line-height: 30px;
+  padding: 25px 25px;
+  color: #fff;//鼠标放置在链接上的文字颜色
+  background-color: transparent;//鼠标放置在链接上的背景颜色，这里设为透明
+}
+
+.navbar-default .navbar-nav > li > a{
+  color: #fff;
+}
+
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+  color: #fff;
+  background-color: transparent;
+}
+
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+  color: #fff;
+  background-color: #465362;
+}
+
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:focus,
+.navbar-default .navbar-nav > .open > a:hover {
+    background-color: #444F62;
+    color: #fff;
+}
+
+.vertical-menu {
+    width: 200px; /* Set a width if you like */
+}
+
+.vertical-menu a {
+    background-color: #F9F9FB; /* Grey background color */
+    color: black; /* Black text color */
+    display: block; /* Make the links appear below each other */
+    padding: 12px; /* Add some padding */
+    text-decoration: none; /* Remove underline from links */
+}
+
+.vertical-menu a:hover {
+    background-color: #d2d9e5; /* Dark grey background on mouse-over */
+}
+
+.vertical-menu a.active {
+    background-color: #314E73; /* Add a green color to the "active/current" link */
+    color: white;
+}

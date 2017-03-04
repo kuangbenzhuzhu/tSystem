@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>教师资格认定工作管理平台 后台</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/lib/w3.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="row">
+    <%= render "common/navbar" %>
+    </div>
+      <div class="row">
+        <div class="col-md-2">
+          <div class="vertical-menu">
+            <a href="#" class="active">Home</a>
+            <a href="#">Link 1</a>
+            <a href="#">Link 2</a>
+            <a href="#">Link 3</a>
+            <a href="#">Link 4</a>
+          </div>
+        </div>
+        <div class="col-md-10">
+          <%= yield %>
+        </div>
+      </div>
+    </div>
+
+
+</body>
+
+
+</html>
